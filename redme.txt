@@ -1,0 +1,7 @@
+To obtain the Q-measure probability density of log-return, we have several steps:
+
+Firstly, I would suggest to use 2-dimension Gauss-Kernel fitting on the whole volatility surface to obtain the robust implied volatility estimates, which is currently the main stream technique in Wall Street, and also can be found in the work by Peter carr and Liuren Wu (2020). After we obtain the volatility smile with fixed maturity (we say it is 1-month); 
+
+secondly, we calculate the implied call options with the BSM model, together with dividend yield of S&P 500 index; 
+
+thirdly, I use the second derivative of call option price on strike price to obtain the Q-measure density of S(T) and further transform it into Q-measure density of log-return. 
